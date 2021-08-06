@@ -2,36 +2,58 @@
 //where you want to wurk input//
 // lAST 48 HR OF postin"
 
-//http://api.adzuna.com/v1/api/jobs/gb/version?app_id={app_id}&app_key={api_key}&&content-type=application/json//
+http://api.adzuna.com/v1/api/jobs/gb/version?app_id={app_id}&app_key={api_key}&&content-type=application/json//
 
-//https://api.adzuna.com/v1/api/jobs/gb/jobsworth?app_id=&app_key=&title=Javascript%20developer&description=Backbone,HTML5,CSS3&content-type=application/json//
+https://api.adzuna.com/v1/api/jobs/gb/jobsworth?app_id=&app_key=&title=Javascript%20developer&description=Backbone,HTML5,CSS3&content-type=application/json//
 
-Form.addEventListener('submit', async function (event) {
-    event.preventDefault()
+// --getwurk is my job result
+const myJobForm = document.getElementById('my-job-form')
+const jobSearch = document.getElementById('job-name')
+const resultsDom = document.getElementById('results')
+
+const jobData = [{
+    jobTitle: 'My Job Title 1',
+    description:
+}{
+    jobTitle: '',
+    description:
+}{
+    jobTitle: 'My Job Title 1',
+    description:
+}]
+
+myJobForm.addEventListener('submit', async function (event) {
+   event.preventDefault()
+    resultsDom.innerHTML=''
+    const
+
+        title, created, display_name, id, tag, redirect_url} =
 
 
-const BASE_URL = 'http://api.adzuna.com/v1/api/jobs/gb/jobsworth?app_id=&app_key=&title=Javascript%20developer&description=Backbone,HTML5,CSS3&content-type=application/json';
-
-    async function  getWurkn() {
-        const response = await fetch(BASE_URL);
-        const data = response.json();
-        const {description, title, created, display_name, id, tag, redirect_url} = wurk;
-
-        jobResultTag.innerHTML=
-            <h1 class= "text-2xl" >" The kind of Wurk your looking for ${jobTitle} in Massachusetts</h1>
-
-       wurk.forEach(function (job){
- const div = document.createElement( `div`)
-           div.innerHTML=
-               <p class = ${job.title} </p>
+const API_URL = 'http://api.adzuna.com/v1/api/jobs/gb/jobsworth?app_id=&app_key=&title=Javascript%20developer&description=Backbone,HTML5,CSS3&content-type=application/json';
 
 
+        const response = await fetch(API_URL);
+        const data = await result.json();
+        return data
+
+       forEach(singlejob => {
+           console.log(singlejob)
+           div = document.createElement(`div`)
+           div.innerHTML =
+               <h3>${job.title} </h3>
+           <p>${job.description}</p>
 
 
+       })
 
 
+console.log(wurk)
+
+        catch (err)  {
+            console.log(err)
         }
-
+    }
 
         document.getElementById(`wurk`).textContent = wurk;
         document.getElementById(`description`).textContent = description;
@@ -43,6 +65,8 @@ const BASE_URL = 'http://api.adzuna.com/v1/api/jobs/gb/jobsworth?app_id=&app_key
         document.getElementById(`redirect_url`).textContent = redirect_url;
 
 
-        jobResultTag.getWurkn(div);
+        resultsDom.append(div);
     })
-})
+    console.log(getWurkn);
+});
+<hr
